@@ -50,3 +50,40 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# ---------- Keil MDK ----------
+# 编译中间产物目录，体积大且每次编译都变，必须忽略
+Objects/
+Listings/
+DebugConfig/
+RTE/_*/
+
+# Keil 用户界面布局文件，每个人打开都会变
+*.uvguix.*
+*.uvoptx
+*.uvopt
+
+# 编译日志与临时文件
+*.build_log.htm
+*.dep
+*.crf
+*.d
+*.lst
+*.axf
+*.htm
+*.lnp
+*.sct
+*.iex
+*.map
+
+# ---------- STM32CubeMX ----------
+# 保留 .ioc（工程配置），忽略备份
+*.ioc.bak
+*_backup/
+
+# ---------- 编辑器 ----------
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+desktop.ini
